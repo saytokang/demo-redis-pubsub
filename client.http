@@ -1,0 +1,18 @@
+
+POST http://localhost:8080/api/ch1/send
+Content-Type: application/json
+
+{
+	"payload" : "무궁화 꽃이 피었습니다.",
+	"sender" : "ohong"
+}
+###
+
+POST http://localhost:8080/api/ch2/send
+Content-Type: application/json
+
+{
+	"payload" : "무궁화 꽃이 피었습니다. ch2",
+	"sender" : "ch2"
+}
+###

@@ -18,9 +18,16 @@ public class MessageController {
     
     private final MessagePublisher messagePublisher;
 
-    @PostMapping("/send")
+    @PostMapping("/ch1/send")
     public ResponseEntity<?> send(@RequestBody Message message) {
-        messagePublisher.publish(message);
+        messagePublisher.publish_ch1(message);
+        return ResponseEntity.ok().build();
+    }
+
+
+    @PostMapping("/ch2/send")
+    public ResponseEntity<?> sendCh2(@RequestBody Message message) {
+        messagePublisher.publish_ch2(message);
         return ResponseEntity.ok().build();
     }
 }

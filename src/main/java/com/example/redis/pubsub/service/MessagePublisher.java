@@ -16,8 +16,13 @@ public class MessagePublisher {
 
     private final RedisTemplate<String, Object> redisTemplate;
 
-    public void publish(Message message) {
+    public void publish_ch1(Message message) {
         redisTemplate.convertAndSend(RedisConfig.TOPIC, message);
+        log.info("publis msg: {}", message);
+    }
+
+    public void publish_ch2(Message message) {
+        redisTemplate.convertAndSend(RedisConfig.TOPIC2, message);
         log.info("publis msg: {}", message);
     }
     
