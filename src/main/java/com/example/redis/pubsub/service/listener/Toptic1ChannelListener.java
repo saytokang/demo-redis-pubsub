@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component
-public class MessageListener {
+public class Toptic1ChannelListener {
     
     public void onMessage(String message) {
         log.info("[CH1: RECEIVED]==>{}", message);
